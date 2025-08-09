@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile card</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+    .main,
+    .background {
+        width: 100%;
+        height: 100vh;
+        background-color: #19a1ad;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .background {
+        justify-content: space-between;
+    }
+
+    .background-part1 {
+        width: 48%;
+        height: 60%;
+        background-image: url("profile-card-component-main/images/bg-pattern-top.svg");
+        background-position: right bottom;
+        background-size: 63vw;
+        background-repeat: no-repeat;
+    }
+
+    .background-part2 {
+        width: 47%;
+        height: auto;
+        max-height: 60%;
+        margin-top: 23%;
+        background-image: url("profile-card-component-main/images/bg-pattern-bottom.svg");
+        background-position: left top, 0% 0%;
+        background-size: 60vw;
+        background-repeat: no-repeat;
+    }
+
+    .profile-card {
+        height: 380px;
+        width: 350px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+    }
+
+    .section1 {
+        width: 100%;
+        height: 130px;
+        background-image: url("profile-card-component-main/images/bg-pattern-card.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .section2,
+    .part1,
+    .part2,
+    .part3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sub-section1 {
+        width: 6em;
+        aspect-ratio: 1;
+        background-image: url("profile-card-component-main/images/image-victor.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        top: 5.3em;
+        border: 5px solid rgb(255, 255, 255);
+        border-radius: 50%;
+    }
+
+    .sub-section2 {
+        margin-top: 4.2em;
+        padding-left: 15px;
+    }
+
+    .sub-section2 h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        color: rgb(30, 30, 30);
+        letter-spacing: .5px;
+    }
+
+    .sub-section2 span,
+    p {
+        font-family: arial;
+        font-weight: 500;
+        color: grey;
+    }
+
+    .sub-section2 p {
+        margin-top: 13px;
+        padding-right: 10px;
+    }
+
+    .sub-section3 {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+        margin-top: 3em;
+    }
+
+    .part1,
+    .par2,
+    .part3 {
+        padding: 0.5em 2.8em;
+        font-family: calibri;
+        color: rgb(30, 30, 30);
+        font-weight: bolder;
+    }
+
+    .sub-section3 p {
+        padding-top: 5px;
+        font-size: 0.8rem;
+    }
+
+    @media (max-width:500px) {
+        .background-part1 {
+            width: 49%;
+            height: auto;
+            margin-bottom: 70%;
+            background-image: url("profile-card-component-main/images/bg-pattern-top.svg");
+            background-position: right bottom;
+            background-size: 120vh;
+            background-repeat: no-repeat;
+        }
+
+        .background-part2 {
+            width: 49%;
+            height: auto;
+            margin-top: 70%;
+            background-image: url("profile-card-component-main/images/bg-pattern-bottom.svg");
+            background-position: left top, 0% 0%;
+            background-size: 100vh;
+            background-repeat: no-repeat;
+        }
+        
+    }
+
+    @media (max-width:360px) {
+        .profile-card {
+            width: 310px;
+            height: 340px;
+        }
+
+        .section1 {
+            height: 110px;
+        }
+
+        .sub-section1 {
+            top: 3.9em;
+        }
+
+        .sub-section3 {
+            margin-top: 2em;
+        }
+
+        .background-part2 {
+            margin-top: 75%;
+        }
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="background">
+            <div class="background-part1"></div>
+            <div class="background-part2"></div>
+        </div>
+        <div class="profile-card">
+            <div class="section1"></div>
+            <div class="section2">
+                <div class="sub-section1"></div>
+                <div class="sub-section2">
+                    <h3>Victor Crest &nbsp;<span>26</span></h3>
+                    <p style="text-align: center;">London</p>
+                </div>
+                <div class="sub-section3">
+                    <div class="part1">
+                        <h3>80K</h3>
+                        <p>Followers</p>
+                    </div>
+                    <div class="part2">
+                        <h3>803K</h3>
+                        <p>Likes</p>
+                    </div>
+                    <div class="part3">
+                        <h3>1.4K</h3>
+                        <p>Photos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
